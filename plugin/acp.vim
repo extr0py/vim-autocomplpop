@@ -32,6 +32,7 @@ function s:makeDefaultBehavior()
         \   'css'       : [],
         \   'scss'      : [],
         \   'javascript': [],
+        \   'typescript': [],
         \   'coffee'    : [],
         \   'ls'        : [],
         \ }
@@ -134,6 +135,11 @@ function s:makeDefaultBehavior()
         \ })
   "---------------------------------------------------------------------------
   call add(behavs.javascript, {
+        \   'command' : "\<C-x>\<C-o>",
+        \   'meets'   : 'acp#meetsForJavaScriptOmni',
+        \   'repeat'  : 0,
+  \})
+  call add(behavs.typescript, {
         \   'command' : "\<C-x>\<C-o>",
         \   'meets'   : 'acp#meetsForJavaScriptOmni',
         \   'repeat'  : 0,
